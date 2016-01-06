@@ -1,0 +1,3 @@
+Please note that this is not an exact replica of the website www.oxenmade.com, but rather a very similar one to the website, as i have developed it according to my web development skills as of the time of this writing.
+
+All the content on the website (articles, images, videos etc.) are not mine, they are all properties of Oxen productions, this template was just done as a practice of my web development skills

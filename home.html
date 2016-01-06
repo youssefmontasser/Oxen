@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Oxen</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/colorbox.css">
+    <style type="text/css">
+
+    .container-fluid  h1{
+      margin-left: 50%;
+    }
+
+    .wrapper {
+      margin-top: 100%;
+    }
+    .video-container {
+     
+     top: 10px;
+     left: 0;
+     width: 100%;
+     height: 100px;
+    }
+
+    video {
+     width: 100%;
+    }
+
+    .video-container h1{
+      position: absolute;
+      text-align: center;
+      margin-top: 35%;
+      margin-left: 50%;  
+      z-index: 1; 
+    }
+
+    span {
+      padding: 5px;
+      border: solid white 3px;
+      border-radius: 15px;
+    }
+
+    header {
+      width: 97.75%;
+      top: 10px;
+      position: fixed;
+      z-index: -1;
+    }
+
+    #stuff-in-header {
+      width: 100%;
+      float: left;
+      background: white;
+    }
+
+    #some-text-stuff {
+      width: 100%;
+      float: left;
+      background: white;
+    }
+
+    .navbar .navbar-nav {
+      width: 100%;
+      text-align: center;
+      padding-top: 3%;
+    }
+
+    .navbar .navbar-nav li {
+      float: none;
+      display: inline-block;
+      margin-right: 7%;
+      margin-left: 7%;
+    }
+
+    #navelement {
+      color: #303030;
+      background: none;
+      font-family: calibri;
+      font-size: 15px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      padding-bottom: 5px;
+      display: inline;
+    }
+
+    #navelement:after{
+      content: '';
+      display: block;
+      margin: auto;
+      height: 2px;
+      width: 0px;
+      background: transparent;
+      transition: width .5s ease, background-color .5s ease;
+    }
+
+    #navelement:hover:after {
+      width: 100%;
+      background: #303030;
+    }
+
+
+    #watermark {
+      float: left;
+      overflow: hidden;
+      width: 50%;
+    }
+
+    #made-in-usa {
+      opacity: 0;
+      margin-left: 60px;
+      margin-top: 100px;
+      font-size: 12px;
+      color: gray;
+      letter-spacing: 3px;
+      font-weight: bold;
+      position: relative;
+    }
+
+    #crafting-with-purpose {
+      opacity: 0;
+      font-family: "Times New Roman", sans-serif;
+      margin-left: 55px;
+      margin-top: 5px;
+      position: relative;
+      color: #303030;
+    }
+
+    #strong-together {
+      opacity: 0;
+      font-family: "Times New Roman", sans-serif;
+      margin-left: 55px;
+      margin-top: 5px;
+      font-weight: bold;
+      font-style: italic;
+      position: relative;
+      color: #303030;
+    }
+
+    #description {
+      float: left;
+      overflow: hidden;
+      opacity: 0; 
+      width: 50%;
+      margin-top: 70px;
+    }
+
+    #description-paragraph {
+      width: 100%;
+      font-family: Arial;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 40px;
+      letter-spacing: 1px;
+      color:  #303030;;
+    }
+
+    #description-paragraph2 {
+      width: 100%;
+      font-family: Arial;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 40px;
+      letter-spacing: 1px;
+      margin-top: 40px;
+      color: #303030; 
+      padding-bottom: 100px;
+    }
+
+    #culture {
+      float: left;
+      overflow: hidden;
+      width: 100%;
+      background: #303030;
+      margin-bottom: 0;
+    }
+
+    #culture div {
+      width: 50%;
+      float: left;
+      overflow: hidden;
+    }
+
+    #culture div img {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .col-md-6 {
+      margin: 0 !important;
+      padding: 0 !important;
+      overflow: hidden;
+    }
+
+    #craft {
+      width: 100%;
+      float: left;
+      background: white;
+      padding-top: 10%;
+    }
+
+    #craft-header {
+      font-family: "Times New Roman";
+      border-top: solid black 3px;
+      margin-right: 32%;
+      margin-left: 32%;
+      padding-top: 30px;
+      color: #303030;
+
+    }
+
+    #craft-parag {
+      margin-right: 150px;
+      margin-left: 150px;
+      line-height: 30px;
+      font-family: calibri;
+      font-size: 17px;
+      margin-top: 30px;
+      margin-bottom: 40px;
+      color: #303030;
+    }
+
+    #craft-num {
+      font-family: calibri;
+      letter-spacing: 3px;
+      color: gray;
+      padding-bottom: 40px;
+      color: #303030;
+    }
+
+    #creative {
+      opacity: 0;
+      float: left;
+      text-align: center;
+    }
+
+    #production {
+      opacity: 0;
+      float: left;
+      text-align: center;
+    }
+
+    #post-production {
+      opacity: 0;
+      margin-top: 50px;
+      float: left;
+      text-align: center;
+    }
+
+    #finishing {
+      opacity: 0;
+      margin-top: 50px;
+      float: left;
+      text-align: center;
+    }
+
+    #craft-videos {
+      width: 100%;
+      float: left;
+      background: #303030;
+    }
+
+    #craft-videos div img{
+      width: 100%;
+    }
+
+    #craft-videos div {
+      float: left;
+    }
+
+    #craft-videos div h1 a {
+      color: white;
+    }
+
+    #craft-videos div h1 {
+      position: absolute;
+      margin-left: 3%;
+      margin-top: 50%;
+      font-family: "Times New Roman"
+    }
+
+    #craft-videos div h1 a:hover {
+      text-decoration: none;
+    }
+
+    #craft-videos div h1 a:visited {
+      text-decoration: none;
+    }
+
+    #journal {
+      width: 100%;
+      float: left;
+      background: white;
+    }
+
+    #journal div {
+      margin-bottom: 50px;
+    }
+
+    #island-shooting {
+      opacity: 0;
+    }
+
+    #choosing-lenses {
+      opacity: 0;
+    }
+
+    #first-month {
+      opacity: 0;
+    }
+
+    #nab-2015 {
+      opacity: 0;
+    }
+    #journal #island-shooting h1 {
+      border-top: none;
+      font-size: 30px;
+      margin-left: 15%;
+      margin-right: 15%;
+      text-align: center;
+    }
+
+    #journal #island-shooting p{
+      text-align: center;
+      margin-left: 15%;
+      margin-right: 15%;
+      margin-top: 50px;
+      font-size: 19px;
+      letter-spacing: 1px;
+    }
+
+    #journal #choosing-lenses h1 {
+      border-top: none;
+      font-size: 30px;
+      margin-left: 10%;
+      margin-right: 10%;
+      text-align: center;
+    }
+
+    #journal #choosing-lenses p {
+      text-align: center;
+      margin-left: 15%;
+      margin-right: 15%;
+      margin-top: 50px;
+      font-size: 19px;
+      letter-spacing: 1px;
+    }
+
+    #journal #first-month h1 {
+      border-top: none;
+      font-size: 30px;
+      margin-left: 10%;
+      margin-right: 10%;
+      text-align: center;
+    }
+
+    #journal #first-month p {
+      text-align: center;
+      margin-left: 15%;
+      margin-right: 15%;
+      margin-top: 50px;
+      font-size: 19px;
+      letter-spacing: 1px;
+    }
+
+    #journal #nab-2015 h1 {
+      border-top: none;
+      font-size: 30px;
+      margin-left: 10%;
+      margin-right: 10%;
+      text-align: center;
+    }
+
+    #journal #nab-2015 p {
+      text-align: center;
+      margin-left: 15%;
+      margin-right: 15%;
+      margin-top: 50px;
+      font-family: calibri;
+      font-size: 19px;
+      letter-spacing: 1px;
+    }
+
+    #journal #nab-2015 #read-more {
+      font-size: 19px;
+      color: #303030;
+      letter-spacing: 1px;
+    }
+
+    #journal .row div #read-more {
+      font-weight: bold;
+      letter-spacing: 2px;
+      font-size: 17px;
+    }
+
+    #journal .row div #read-more a {
+      color: #303030;
+      transition: color 0.5s;
+    }
+   
+    #journal .row div #read-more a:hover {
+      text-decoration: none;
+      color: gray;
+    }
+    #journal .row div #craft-num {
+      color: gray;
+      font-size: 15px;
+    }
+
+    #accepting-projects {
+      float: left;
+      background: #303030;
+      width: 100%;
+    }
+
+    #accepting-projects h1 {
+      
+      line-height: 55px;
+      padding-bottom: 300px;
+      padding-top: 150px;
+      color: white;
+      font-family: "Times New Roman";
+      font-size: 320%;
+      margin-left: 5%;
+    }
+
+    #drone {
+      opacity: 0;
+    }
+
+
+    #camera {
+      opacity: 0;
+    }
+
+    #offscreen {
+      opacity: 0;
+    }
+
+    #camera-zoom {
+      opacity: 0;
+    }
+
+    #keith {
+      opacity: 0;
+    }
+
+    #kindrid {
+      opacity: 0;
+    }
+
+    #cap-guy {
+      opacity: 0;
+    }
+
+    #harbr {
+      opacity: 0;
+    }
+
+    #focus {
+      opacity: 0;
+    }
+
+    #c1-bank {
+      opacity: 0;
+    }
+
+    #yellow {
+      opacity: 0;
+    }
+
+    #craft-videos .col-md-6 h1:after{
+      content: '';
+      display: block;
+      margin: auto;
+      height: 2px;
+      width: 0px;
+      background: transparent;
+      transition: width .5s ease, background-color .5s ease;
+    }
+
+    #craft-videos .col-md-6 h1:hover:after {
+      width: 100%;
+      background: white;
+    }
+
+    #reach {
+      background: white;
+      height: 100%;
+      float: left;
+      width: 100%;
+      
+    }
+
+    #reach ul li {
+      display: inline;
+      text-align: center;
+    }
+
+    #reach a {
+      display: inline-block;
+      width: 23%;
+      padding: .75rem 0;
+      margin: 0;
+      text-decoration: none;
+      color: #303030;
+      font-size: 15px;
+      font-weight: bold;
+      font-family: calibri
+      transition: color 0.5s;
+    }
+
+    #reach a:hover {
+      color: gray;
+    }
+
+    </style>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/jquery.colorbox.js"></script>
+    <script>
+      $(document).ready(function(){
+        $(".vimeo").colorbox({iframe:true, innerWidth:700, innerHeight:400});
+
+          $("#click").click(function(){ 
+          $('#click').css({"background-color":"#f00", "color":"#fff", "cursor":"inherit"}).text("Open this window again and this message will still be here.");
+          return false;
+        });
+      });
+    </script>
+
+
+  <body> 
+  <div class="container-fluid">
+        <a href="#stuff-in-header"><h1><span class = " glyphicon glyphicon-chevron-down" style = "color:white"></span> </h1></a>
+        <div class="wrapper">
+          <header> 
+           <div class="video-container">
+             <video preload="true" autoplay="" volume="0" loop="loop">
+              <source src="http://crnt.co/wp-content/uploads/2015/05/LOOP_720.mp4" type="video/mp4">
+                <source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/349756/tasklyvid.webm">
+                  <source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/349756/tasklyvid.ogv" type="video/ogg">
+              </video> <!-- end of video -->
+            </div> <!-- end of video container -->
+          </header>
+
+          <section class="content">
+          <div id="stuff-in-header">
+          <div class="navbar  navbar-static-top">
+            <div class="container">
+              <div class="collapse navbar-collapse navHeaderCollapse">
+                <ul class="nav navbar-nav">
+                  <li ><a href="#culture" id="navelement" >CULTURE</a></li>
+                  <li ><a href="#craft" id="navelement" >CRAFT</a></li>
+                  <li ><a href="#journal" id="navelement" >JOURNAL</a></li>
+                  <li ><a href="#reach" id="navelement" >REACH</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="some-text-stuff">  
+          <div id="watermark">
+            <h1 id="made-in-usa">MADE IN USA</h1>
+            <h1 id="crafting-with-purpose">Crafting with purpose,</h1>
+            <h1 id="strong-together">Strong Together.</h1>
+          </div>
+
+          <div id="description">
+            <p id="description-paragraph"> Oxen is a film production studio reigning in Tampa, FL—teaming up with people and brands that live and work with quality, creativity, and passion. We focus on intentional and innovative ways to craft compelling visual stories through production for the masses. </p>
+
+            <p id="description-paragraph2">With over 15 years of combined creative and production experience, our focus lies heavily on working with brands and agencies to create visual and moving content for the digital world.</p>
+          </div>
+        </div>
+
+        <div id="culture">
+          <div class="col-md-6">
+            <img src="Oxen Pics/1. pic-drone.jpg" id="drone">
+          </div>
+          
+          <div class="col-md-6">
+            <img src="Oxen Pics/2.pic-camera.jpg" id="camera">
+          </div>
+
+          <div class="col-md-6">
+            <img src="Oxen Pics/3. pic-offscreen1.jpg" id="offscreen">
+          </div>
+          
+          <div class="col-md-6">
+            <img src="Oxen Pics/4. 094A9965-2.jpg" id="camera-zoom">
+          </div>
+          
+          <div class="col-md-6">
+            <img src="Oxen Pics/5. pic-keith.jpg" id="keith">
+          </div>
+        </div>
+
+        <div id="craft">
+          <div id="creative" class="col-md-6">
+            <h1 id="craft-header">Creative</h1>
+            <p id="craft-parag">We put emotion first and thrive on telling impactful stories. The goal of finding a narrative between your brand and the viewer is what gets us up in the morning.</p>
+            <p id="craft-num">CRAFT / 01</p>
+          </div>
+
+          <div id="production" class="col-md-6">
+            <h1 id="craft-header">Production</h1>
+            <p id="craft-parag">We’re most comfortable at the edge of tomorrow. Embracing cutting edge solutions available to filmmakers with the goal of telling your story in new and exciting ways.</p>
+            <p id="craft-num">CRAFT / 02</p>
+          </div>
+
+          <div id="post-production" class="col-md-6">
+            <h1 id="craft-header">Post-Production</h1>
+            <p id="craft-parag">We are storytellers and it’s in the edit phase that we take those beautiful images and help bring them to life with one goal in mind. To move you.</p>
+            <p id="craft-num">CRAFT / 03</p>
+          </div>
+
+          <div id="finishing" class="col-md-6">
+            <h1 id="craft-header">Finishing</h1>
+            <p id="craft-parag">We offer clients a full spectrum of finishing services including color grading, sound design and mix, custom scoring and 4K conform. We’re able to assist you from concept through delivery.</p>
+            <p id="craft-num">CRAFT / 04</p>
+          </div>
+        </div>
+
+        <div id="craft-videos">
+          <div class="col-md-6">
+            <img src="Oxen Pics/6.Keith_A7s.jpg" id="cap-guy">
+          </div>
+          <div class="col-md-6"  id="kindrid">
+            <h1><a class='vimeo' href="https://player.vimeo.com/video/148288935">Kindrid</a></h1>
+            <img src="Oxen Pics/Kindrid_Site.jpg">
+          </div>
+          <div class="col-md-6"  id="harbr">
+            <h1><a class='vimeo' href="https://player.vimeo.com/video/148662940">Harbr Co</a></h1>
+            <img src="Oxen Pics/Santa_Site_New.jpg">
+          </div>
+          <div class="col-md-6" id="focus">
+            <img src="Oxen Pics/Kindrid_Focus.jpg">
+          </div>
+          <div class="col-md-6" id="c1-bank">
+          <h1><a class='vimeo' href="https://player.vimeo.com/video/139708118">C1 Bank</a></h1>
+            <img src="Oxen Pics/7.C1.jpg">
+          </div>
+          <div class="col-md-6" id="yellow">
+          <h1><a class='vimeo' href="https://player.vimeo.com/video/137563377">Yellow Co</a></h1>
+            <img src="Oxen Pics/9.New_Yellow-copy.jpg">
+          </div>
+        </div>
+
+        <div id="journal">
+          <div class="row">
+            <div id="island-shooting" class="col-md-6">
+              <h1 id="craft-header">Island Shooting in St. Thomas</h1>
+              <p id="craft-parag"> We just completed a week long shoot down in St. Thomas, I know super dumpy gig. In this post I’ll discuss what gear we took, how we shot and any complications we may have encountered.</p>
+              <p id="read-more"><a href = "stthomas.html">READ MORE</a></p>
+              <p id="craft-num">KYLE BARRETT • 19-07-15</p>
+            </div>
+
+            <div id="choosing-lenses" class="col-md-6">
+              <h1 id="craft-header">Choosing Our Lenses: PrimeCircle XM</h1>
+              <p id="craft-parag">When it came to deciding what lens package to invest into there were several factors that came into play. Naturally the most obvious was cost followed by speed, build quality and compatibility.</p>
+              <p id="read-more"><a href = "choosinglenses.html">READ MORE</a></p>
+              <p id="craft-num">KYLE BARRETT • 19-07-15</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div id="first-month" class="col-md-6">
+              <h1 id="craft-header">First month with our Inspire 1</h1>
+              <p id="craft-parag">We’ve long been fans of aerial cinematography, but to this point we’d never ventured down the path of owning our own copter. The first flight with this thing was an incredible experience right from the start.</p>
+              <p id="read-more"><a href = "firstmonthwithinspire.html">READ MORE</a></p>
+              <p id="craft-num">KEITH BURNSON • 02-05-15</p>
+
+            </div>
+
+            <div id="nab-2015" class="col-md-6"> 
+              <h1 id="craft-header">NAB 2015 Goodness</h1>
+              <p>If you’re in the video business and have not been to NAB you are doing yourself a huge disservice. We’ve been twice now and every year it gets better which is hard to believe given how incredible it all is.</p>
+              <p id="read-more"><a href = "nab15">READ MORE</a></p>
+              <p id="craft-num">KYLE BARRETT • 01-05-15</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="accepting-projects">
+          <h1>We're Accepting new <br> projects at this time, <br>so let's plan something</h1>
+        </div>
+
+        <div id="reach">
+          <ul>
+            <li><a href = "https://instagram.com/oxen_made">INSTAGRAM</a></li>
+            <li><a href = "https://www.facebook.com/oxenmade">FACEBOOK</a></li>
+            <li><a href = "https://vimeo.com/oxenmade">VIMEO</a></li>
+            <li><a href = "">EMAIL US</a></li>
+          </ul>
+        </div>
+  </div>
+  </body>
+</html>
